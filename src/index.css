@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.current{
+    @apply font-medium text-white border-b-2 border-red02;
+}
+.checkbox{
+    appearance: none;
+    width: 17px;
+    height: 17px;
+    background-color: #484f58;
+    border:1px solid #000;
+    border-radius: 3px;
+}
+.checkbox:checked{
+    background-color: #343a3f;
+}
+.checkbox:checked::before{
+    content: '\2713';
+    display: block;
+    text-align: center;
+    line-height: 17px;
+    color: #fff;
+}
