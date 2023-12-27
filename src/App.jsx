@@ -30,9 +30,9 @@ function App() {
     }else if(tab==='week'){
       return <Week tasks={tasks}/>
     }else if(tab==='month'){
-      return <Month />
+      return <Month tasks={tasks}/>
     }else if(tab==='year'){
-      return <Year />
+      return <Year tasks={tasks}/>
     }
   }
 
