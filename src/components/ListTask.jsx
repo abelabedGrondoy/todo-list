@@ -31,7 +31,7 @@ const Task = ({ task,tasks, setTasks }) => {
 
 const ListTask = ({ date, tasks, setTasks }) => {
   function filterTasksByDate(tasks, date) {
-    return tasks.filter(task => task.date.toLocaleDateString() === date.toLocaleDateString())
+    return tasks.filter(task => new Date(task.date).toLocaleDateString() === date.toLocaleDateString())
   }
   return (
     <section className='max-w-[450px] m-auto pb-7 pt-1 px-4'>

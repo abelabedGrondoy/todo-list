@@ -1,10 +1,10 @@
 import React from 'react'
 import TextL from './icons/TextL'
-let nextId = 0;
+
 const Form = ({date,tasks,setTasks}) => {
   function addTask(e){
     const newTask={
-      id:nextId++,
+      id: crypto.randomUUID(),
       task:e.target[0].value,
       completed:false,
       date:date

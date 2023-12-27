@@ -1,6 +1,23 @@
 import React from 'react'
 
-const Week = () => {
+const Week = ({tasks}) => {
+    function filterTasksByWeek(tasks){
+        const date=new Date();
+        const currentDay=date.getDay();
+
+        const week={
+            sunday: date.setDate(date.getDate()-currentDay),
+            monday: date.setDate(date.getDate()+1),
+            tuesday:date.setDate(date.getDate()+1),
+            wednesday:date.setDate(date.getDate()+1),
+            thursday:date.setDate(date.getDate()+1),
+            friday:date.setDate(date.getDate()+1),
+            saturday:date.setDate(date.getDate()+1)
+        }
+        
+        // return tasks.filter(task=>new Date(task.date).toLocaleDateString()===)
+    }
+    console.log(filterTasksByWeek(tasks));
   return (
     <section className='max-w-[450px] m-auto px-4 pb-7'>
         <div className='flex justify-between gap-2 border rounded  p-2 mb-2 bg-gray04 '>

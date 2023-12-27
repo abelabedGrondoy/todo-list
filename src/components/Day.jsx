@@ -6,11 +6,6 @@ import { getDate } from '../helpers/getDate';
 
 const Day = ({date,setDate}) => {
 
-  function toString(date){
-    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-    return date.toLocaleDateString('en-US', options)
-  }
-
   function addDay(){
     const newDate = new Date(date);
     newDate.setDate(newDate.getDate() + 1);

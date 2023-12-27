@@ -28,7 +28,7 @@ function App() {
         <ListTask date={date} tasks={tasks} setTasks={setTasks}/>
       </>
     }else if(tab==='week'){
-      return <Week />
+      return <Week tasks={tasks}/>
     }else if(tab==='month'){
       return <Month />
     }else if(tab==='year'){
